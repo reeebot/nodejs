@@ -10,5 +10,5 @@ fs.readdir(dir, function (err, files) {
     files.filter(function (file) {
         return fs.statSync(file).isFile();
     }).forEach(function (file) {
-        if (ext == path.extname(file)) { console.log(file)}
+        if ("." + ext == path.extname(file)) { console.log(file)}
 })});
